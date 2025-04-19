@@ -1,0 +1,4 @@
+env1/
+*.env
+*poetry.lock
+*pyproject.toml
