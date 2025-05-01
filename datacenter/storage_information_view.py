@@ -7,7 +7,6 @@ from django.utils import timezone
 import datetime
 
 def storage_information_view(request):
-    # Программируем здесь
     visits = Visit.objects.filter(leaved_at=None) 
     non_closed_visits = [
         {
@@ -17,6 +16,6 @@ def storage_information_view(request):
         }
     for visit in visits]
     context = {
-        'non_closed_visits': non_closed_visits,  # не закрытые посещения
+        'non_closed_visits': non_closed_visits,
     }
     return render(request, 'storage_information.html', context)

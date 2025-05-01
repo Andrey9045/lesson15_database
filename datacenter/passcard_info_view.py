@@ -9,8 +9,6 @@ from django.shortcuts import get_object_or_404
 def passcard_info_view(request, passcode):
     found_passcard = get_object_or_404(Passcard, passcode=passcode)
     visits = Visit.objects.filter(passcard=found_passcard)
-    # Программируем здесь
-
     this_passcard_visits = [
         {
             'entered_at': str(visit.entered_at),
