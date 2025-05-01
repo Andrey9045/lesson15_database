@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils import timezone
 import datetime
-from .functions_for_the_database import get_duration, format_duration, is_visit_long 
+from datacenter.time_functions import get_duration, format_duration, is_visit_long 
 
 class Passcard(models.Model):
     is_active = models.BooleanField(default=False)
