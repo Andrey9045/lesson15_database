@@ -56,6 +56,8 @@ DB_USER=*****
 DB_PASSWORD=*****
 SECRET_KEY=*****
 DEBUG=*****
+SECRET_KEY=*****
+ALLOWED_HOSTS=*****
 ```
 Заполните необходимую информацию
 ## Запуск скрипта
