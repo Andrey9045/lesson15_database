@@ -22,5 +22,5 @@ def format_duration(duration, seconds_in_minute=60, seconds_in_hour=3600):
     return format_duration
 
 def is_visit_long(visit, minutes=60):
-    return get_duration(visit)>datetime.timedelta(minutes=60)
+    return get_duration(visit)>datetime.timedelta(minutes=minutes)
     
