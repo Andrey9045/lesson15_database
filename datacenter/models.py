@@ -1,7 +1,8 @@
 from django.db import models
 from django.utils import timezone
 import datetime
-from datacenter.time_functions import get_duration, format_duration, is_visit_long 
+from datacenter.time_functions import get_duration, format_duration, is_visit_long
+
 
 class Passcard(models.Model):
     is_active = models.BooleanField(default=False)
@@ -30,8 +31,4 @@ class Visit(models.Model):
                 if self.leaved_at else 'not leaved'
             )
         )
-
-
-
-
     

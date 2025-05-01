@@ -6,8 +6,9 @@ from datacenter.models import format_duration
 from django.utils import timezone
 import datetime
 
+
 def storage_information_view(request):
-    visits = Visit.objects.filter(leaved_at=None) 
+    visits = Visit.objects.filter(leaved_at=None)
     non_closed_visits = [
         {
             'who_entered': str(visit.passcard),
