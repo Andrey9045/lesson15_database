@@ -7,7 +7,7 @@ from datacenter.models import is_visit_long
 from django.shortcuts import get_object_or_404
 
 def passcard_info_view(request, passcode):
-    found_passcard = get_object_or_404(Passcard, passcode=passcode)
+    passcard = get_object_or_404(Passcard, passcode=passcode)
     visits = Visit.objects.filter(passcard=found_passcard)
     this_passcard_visits = [
         {
