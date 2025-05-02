@@ -13,9 +13,14 @@ def storage_information_view(request):
         {
             'who_entered': str(visit.passcard),
             'entered_at': visit.entered_at.strftime('%d %B %Y г. %H:%M'),
-            'duration': format_duration(get_duration(visit), seconds_in_minute=60, seconds_in_hour=3600),
+            'duration': format_duration(
+                get_duration(visit),
+                seconds_in_minute=60,
+                seconds_in_hour=3600,
+            ),
         }
-    for visit in visits]
+        for visit in visits
+    ]
     context = {
         'non_closed_visits': non_closed_visits,
     }
