@@ -45,7 +45,7 @@ pip install -r requirements.txt
 ```
 
 ## Создание .env
-Создайте файл .env, расширение all
+Создайте файл .env
 Содержимое файла:
 ```
 DB_ENGINE=*****
